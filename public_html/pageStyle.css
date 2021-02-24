@@ -13,6 +13,21 @@ body
     font-weight:500;
     background-color:#0a0726;
     color:#ffd300;
+    border-radius:15px;
+    outline:none;
+}
+
+/* Class that styles the buttons for login, signup and recovery */
+.credentialsSubmitButton{
+    background-color:transparent;
+    color:#ffd300;
+    border:2px solid;
+    font-variant:small-caps;
+    transition-duration:0.4s;
+}
+
+.credentialsSubmitButton:hover {
+    
 }
 
 /* Class that centers horizontally and vertically the forms for user login and signup*/
