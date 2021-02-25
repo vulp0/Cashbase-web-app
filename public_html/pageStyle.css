@@ -40,6 +40,7 @@ body
     color:#ffd300;
     background-color:transparent;
     border:none;
+    cursor:pointer;
 }
 
 /* ID to style the login button uniquely */
