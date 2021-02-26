@@ -1,9 +1,6 @@
-/* El text allign del body aqui abajo podria traer problemas 
-   especialmente cuando llegue la hora de diseñar la pagina principal */
 body
 {
     background-color:#071325;
-    text-align:center;
 }
 
 /*Class that styles the login/signup text fields*/
@@ -28,7 +25,6 @@ body
     border-radius:12px;
     cursor:pointer;
 }
-
 /* Class that styles the same buttons from the class above, but for when you hover over them */
 .credentialsSubmitButton:hover {
     transition-duration:0.5s;
@@ -45,8 +41,8 @@ body
     cursor:pointer;
 }
 
-/* ID to style the login button uniquely */
-#loginButton{
+/* class to style the main button on the page */
+.mainButton{
     font-size:180%;
     width:100%;
 }
