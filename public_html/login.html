@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <!-- 
-color yellow: #ffd300
-color deep blue: #071325
-color green?: #072326
+colores que podria usar para la pagina
+color amarillo: #ffd300
+color azul marino: #071325
 -->
 
 <html>
     <head>
-        <title>No le se al html</title>
+        <title>Cashbase - Iniciar Sesion</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     
-    <body>
+    <body style="text-align:center;">
         <link rel="stylesheet" href="pageStyle.css">
-        
-        
         
         <!-- Form to enter user data for login -->
         <div class="formVerticalHorizontalCenter">
-            <p style="color:#ffd300"> PLACEHOLDER </p><br><br><br>
+            <p style="color:#ffd300"> Aqui deberia haber un logo animado bien bonito </p><br><br><br>
             
-        <form name="usernameInput">
+        <form name="userLoginData">
             <!-- Text fields for Username and Password input -->
             <input type="text" class="credentialsInputField" placeholder="Tu usuario o mail"> <br> <br>
-            <input type="password" class="credentialsInputField" id="loginPasswordField" placeholder="Tu contraseña"> <br> <br>
+            <input type="password" class="credentialsInputField" placeholder="Tu contraseña"> <br> <br>
+            
             <!-- Buttons to submit Username and Password input given above -->
-            <input type="submit" class="credentialsSubmitButton" id="loginButton" value="Iniciar Sesion"> <br> <br>
-            <button id="lostPasswordButton">Perdiste tu contraseña?</button> <hr>
-            <input type="submit" class="credentialsSubmitButton" value="Crear una cuenta"> <br>
+            <input type="submit" class="credentialsSubmitButton mainButton"  value="Iniciar Sesion"> <br> <br>
         </form>
+            <a href="passwordRecovery.html">
+                <button id="lostPasswordButton">Perdiste tu contraseña?</button> 
+            </a>
+            <hr> <br>
+            <a href="signup.html">
+                <button class="credentialsSubmitButton mainButton">Crear cuenta</button>
+            </a>
         </div>
-        
         
     </body>
 </html>
