@@ -13,12 +13,13 @@ Pagina para que el usuario se registre, le pedira un nombre de usuario, correo y
         <link rel="stylesheet" href="pageStyle.css">
         
         <div class="formVerticalHorizontalCenter">
-            <p style="color:#ffd300"> Aqui deberia haber un logo animado bien bonito </p><br><br><br>
+            <p style="color:#ffd300"> Aqui deberia haber un logo animado bien bonito </p><br><br>
             
             <form name="userSignupData">
-                <input type="text" class="credentialsInputField" placeholder="Tu nombre de usuario"> <br><br>
-                <input type="email" class="credentialsInputField" placeholder="Tu correo electronico"> <br><br>
-                <input type="password" class="credentialsInputField" placeholder="Tu contraseña"> <br><br> <hr> <br>
+                <hr><br>
+                <input type="text" class="credentialsInputField" placeholder="Tu nombre de usuario" required> <br><br>
+                <input type="email" class="credentialsInputField" placeholder="Tu email" required> <br><br>
+                <input type="password" class="credentialsInputField" placeholder="Tu contraseña" required> <br><br> <hr> <br>
                 <button class="credentialsSubmitButton mainButton">Registrar cuenta</button>
             </form>
             
