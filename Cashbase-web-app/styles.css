@@ -1,0 +1,62 @@
+body
+{
+    background-color:#071325;
+}
+
+/*Class that styles the login/signup text fields*/
+.credentialsInputField{
+    padding: 14px 20px;
+    font-size:165%;
+    font-family: Noto Sans, sans-serif;
+    font-variant: small-caps;
+    font-weight:500;
+    background-color:#091933;
+    color:#ffd300;
+    border-radius:15px;
+    outline:none;
+}
+
+/* Class that styles the buttons for login, signup and recovery */
+.credentialsSubmitButton{
+    background-color:#091933;
+    color:#ffd300;
+    border:2px solid;
+    font-variant:small-caps;
+    border-radius:12px;
+    cursor:pointer;
+}
+/* Class that styles the same buttons from the class above, but for when you hover over them */
+.credentialsSubmitButton:hover {
+    transition-duration:0.5s;
+    background-color:#ffd300;
+    color:#091933;
+}
+
+/* ID to style the recover password button uniquely */
+#lostPasswordButton{
+    font-size:100%;
+    color:#ffd300;
+    background-color:transparent;
+    border:none;
+    cursor:pointer;
+}
+
+/* class to style the main button on the page */
+.mainButton{
+    font-size:180%;
+    width:100%;
+}
+
+/* Class that centers horizontally and vertically the forms for user login and signup*/
+.formVerticalHorizontalCenter{
+    box-shadow:6px 6px 9px  #091933;
+    border-radius:10px;
+    background-color:#0e274c;
+    padding:50px;
+    margin: 0px 0px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -ms-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+}
