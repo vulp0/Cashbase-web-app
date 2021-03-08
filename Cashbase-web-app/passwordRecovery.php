@@ -8,10 +8,10 @@ de confirmacion que debera introducir y esto lo llevara a otra pagina para reest
         <title>Cashbase - Recuperar cuenta</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
     </head>
     
     <body>
-        <link rel="stylesheet" href="styles.css">
         
         <div class="formVerticalHorizontalCenter">
             <p style="color:#ffd300"> Aqui deberia haber un logo animado bien bonito </p><br><br>
