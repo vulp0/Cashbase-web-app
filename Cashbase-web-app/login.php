@@ -10,10 +10,10 @@ color azul marino: #071325
         <title>Cashbase - Iniciar Sesion</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
     </head>
     
     <body style="text-align:center;">
-        <link rel="stylesheet" href="styles.css">
         
         <!-- Form to enter user data for login -->
         <div class="formVerticalHorizontalCenter">

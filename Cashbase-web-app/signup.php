@@ -7,9 +7,9 @@ Pagina para que el usuario se registre, le pedira un nombre de usuario, correo y
         <title>Cashbase - Crear cuenta</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <body style="text-align:center;">
     </head>
     
-    <body style="text-align:center;">
         <link rel="stylesheet" href="styles.css">
         
         <div class="formVerticalHorizontalCenter">
