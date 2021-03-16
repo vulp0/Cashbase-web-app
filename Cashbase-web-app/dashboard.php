@@ -17,23 +17,25 @@ aumento y lineas rojas para perdida
         <title>Cashbase - Tablero</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
         
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     
     <body>
         
         <!-- dashboard sidebar -->
         <div class="dashboardSidebar">
-            <a href="">Chocoflan</a>
-            <a>Cuchufle</a>
-            <a>Capirotada</a>
-            <a>Ensalada de pollo</a>
+            <a href="" class="dashboardSidebarButton"><i class="glyphicon glyphicon-home"></i><br>Inicio</a>
+            <a href="" class="dashboardSidebarButton"><i class="glyphicon glyphicon-cog"></i><br>Configuracion</a>
+            <a href="" class="dashboardSidebarButton"><i class="glyphicon glyphicon-log-out"></i><br>Cerrar sesion</a>
         </div>
         
         <!-- everything else in the dashboard, the main thing -->
         <div class="dashboardMain">
-            <div class="dashboardElement">Hamana hamana hamana hamana hamana hamana hamana hamana hamana hamana hamana hamana </div>
+            <!-- Each div from now on represents an element -->
+            <div class="dashboardElement"><i class="glyphicon glyphicon-info-sign"></i> Hamana hamana hamana hamana hamana hamana hamana hamana hamana hamana hamana hamana </div> <br>
+            <div style="font-size:50px;" class="dashboardElement"><i class="glyphicon glyphicon-modal-window" ></i>AMONGUS</div>
         </div>
         
         <!-- scriptssss -->
@@ -51,7 +53,7 @@ aumento y lineas rojas para perdida
         <style>
             .dashboardSidebar{
                 height:100%;
-                width:140px;
+                width:150px;
                 position:fixed;
                 z-index:1;
                 top:0;
@@ -78,8 +80,20 @@ aumento y lineas rojas para perdida
                 padding: 0px 10px;
             }
             
+            .dashboardSidebarButton{
+                text-align:center;
+                display:inline-block;
+                padding:10px;
+            }
+            
+            /* class that styles an element, an element i define as for example; a circular chart and a line chart are different elements as they are different things with different functions -they are their own thing- */
             .dashboardElement{
                 color:#ffd300;
+                border-radius:10px;
+                box-shadow:6px 6px 9px  #091933;
+                padding:50px;
+                margin: 0px 0px;
+                background-color:#0e274c;
             }
         </style>
         
