@@ -60,8 +60,3 @@ body
     -ms-transform:translate(-50%, -50%);
     transform:translate(-50%, -50%);
 }
-
-/* class that styles an element, an element i define as for example; a circular chart and a line chart are different elements as they are different things with different functions -they are their own thing- */
-.dashboardElement{
-    color:#ffd300;
-}
