@@ -1,4 +1,5 @@
 todo reescrito en php porque voy a tener que hacer cosas con mysql, php y todo eso
+update: si si, esta hecho en php pero no he hecho nada en php ni mysql AUN. ya llegare a eso pronto, espero
 
 Si quieres ejecutar la pagina tu mismo necesitaras:
 1. descargar todos los archivos
