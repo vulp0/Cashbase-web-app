@@ -14,12 +14,15 @@ aumento y lineas rojas para perdida
 -->
 <html>
     <head>
-        <title>Cashbase - Tablero</title>
+        <title>Cashbase - Inicio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <!-- imports the icons used -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- imports the css on the page -->
         <link rel="stylesheet" href="styles.css">
+        
     </head>
     
     <body>
@@ -33,20 +36,75 @@ aumento y lineas rojas para perdida
         
         <!-- everything else in the dashboard, the main thing -->
         <div class="dashboardMain">
+            
             <!-- Each div from now on represents an element -->
-            <div class="dashboardElement"><i class="glyphicon glyphicon-info-sign"></i> Hamana hamana hamana hamana hamana hamana hamana hamana hamana hamana hamana hamana </div> <br>
-            <div style="font-size:50px;" class="dashboardElement"><i class="glyphicon glyphicon-modal-window" ></i>AMONGUS</div>
+            
+            <!-- Grafica 1, grafico de gastos  -->
+            <div class="dashboardElement">
+                <p><i class="glyphicon glyphicon-info-sign"></i> Gastos mensuales</p>
+                <canvas id="expensesChart" width="400" height="400"> </canvas>
+            </div> <br> <br>
+            
+            <!-- MOTD element -->
+            <div class="dashboardElement">
+                <i class="glyphicon glyphicon-info-sign"></i> MOTD
+                <p id="MOTD"></p>
+            </div>
+            
         </div>
         
+        
         <!-- scriptssss -->
-        <script src="C:\Users\Equipo\node_modules\chart.js\dist\Chart.js"></script>
+        <!-- import chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
         
         <script>
-            var lineChart = new Chart(ctx, {
-                type: 'line',
-                data: data,
-                options: options
-            });
+            /* random messages for the tips button */
+            const motd = [
+                "Ahorrar es lo mas basico que puedes hacer, hazlo porfavor",
+                "Los vicios son un desperdicio. Te destruyen a ti y a tu dinero",
+                "Comprar cafe es una estafa total, compra una cafetera y aprende a hacer tu propio cafe. Ahorraras muchisimo dinero si sueles tomar cafe regularmente.",
+                "Usar este servicio solo funciona con disciplina, registra TODOS tus gastos",
+                "El primer paso para mejorar tu situacion economica es ser frugal",
+                "No te pongas en deuda, a menos que esto puedas obtener un beneficio de esta"
+            ];
+            document.getElementById("MOTD").innerHTML = "<p>" + motd[Math.floor(Math.random() * motd.length)] + "</p>";
+            
+            /* grafica 1 scripts */
+            var ctx = "expensesChart";
+            
+            var labels = ['Servicio de cable', 'Suscripciones', 'Electricidad', 'Agua', 'Comida'];
+            var expenses = [1200, 2500, 600, 255, 3000];
+            
+            /* expenses donut chart itself */
+            var expensesChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                            data: expenses,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: false,
+                }
+                });
+            
         </script>
         
         <!-- sidebar styling -->
@@ -94,6 +152,7 @@ aumento y lineas rojas para perdida
                 padding:50px;
                 margin: 0px 0px;
                 background-color:#0e274c;
+                display:inline-block;
             }
         </style>
         
