@@ -47,12 +47,26 @@ no se que mas poner aaaaaaaaa
             
             <!-- grafica 2, ahorros del usuario -->
             <div class='dashboardElement'>
-                <p class='dashboardElementTitle'><i class='glyphicon glyphicon-usd'></i> Grafica de ahorros</p>
+                <p class='dashboardElementTitle'><i class='glyphicon glyphicon-usd'></i> Ahorros anuales</p>
                 <canvas id='savingsChart' width='950%' height="200%"></canvas>
             </div>
             
+            <!-- grafica 3, ingresos mensuales -->
+            <div class="dashboardElement">
+                <p class="dashboardElementTitle"><i class="glyphicon glyphicon-briefcase"></i> Ingresos mensuales</p>
+                <canvas id="incomeChart" width="256%" height="256%"></canvas>
+            </div>
+            
+            <!-- grafica 4, metas de ahorro -->
+            <div class="dashboardElement" style="width:39%">
+                <p class="dashboardElementTitle"><i class="glyphicon glyphicon-flag"></i> Metas</p>
+                <!-- la barra (NO SE COMO HACERLA PTM -->
+                <meter id="goalsProgressBar" value="50" max="100" style="width:100%; height:40px"></meter>
+                <p>aqui deberia haber texto que complemente la barra de arriba</p>
+                </div>
+            
             <!-- MOTD element -->
-            <div class="dashboardElement dashboardElementTitle" style="width:60%">
+            <div class="dashboardElement dashboardElementTitle" style="width:97%">
                 <i class="glyphicon glyphicon-education"></i> El tip del dia
                 <p id="MOTD" class='dashboardElementTextContent'></p>
             </div>
@@ -68,7 +82,7 @@ no se que mas poner aaaaaaaaa
         <!-- MOTD script -->
         <script>
             const motd = [
-                "Ahorrar es lo mas basico que puedes hacer, hazlo porfavor",
+                "Ahorrar es lo mas basico que puedes hacer",
                 "Los vicios son un desperdicio. Te destruyen a ti y a tu dinero",
                 "Comprar cafe es una estafa total, compra una cafetera y aprende a hacer tu propio cafe. Ahorraras muchisimo dinero si sueles tomar cafe regularmente.",
                 "Usar este servicio solo funciona con disciplina, registra TODOS tus gastos",
@@ -76,7 +90,8 @@ no se que mas poner aaaaaaaaa
                 "Evita ponerte en deuda, a menos que esto pueda traerte un beneficio",
                 "Tienes 2 tipos de gastos, necesarios y discrecionales. Los necesarios son aquellos que son obligatorios y no se puede vivir sin estos (comida, agua, electricidad, internet). Y luego los discrecionales(opcionales), estos son cosas que no son necesarias de tener pero tienes la opcion de comprar(cafe, comida de fuera, vicios, mas ropa de la que utilizas)",
                 "Deja tu maldito ego a un lado y consigue un buen carro usado. Bajo en consumo de gasolina, mantenimiento facil y con buen seguro",
-                "La ropa/calzado de diseñador es un asco. Evitala como la plaga"
+                "La ropa/calzado de diseñador es un asco. Evitala como la plaga",
+                "Diversificar y tener mas de una fuente de ingresos es una muy buena idea"
             ];
             document.getElementById("MOTD").innerHTML = "<p>" + motd[Math.floor(Math.random() * motd.length)] + "</p>";
         </script>
@@ -172,6 +187,46 @@ no se que mas poner aaaaaaaaa
             document.getElementById("greetBarUsername").innerHTML = username;
         </script>
         
+        <!-- grafica de ingresos script -->
+        <script>
+            var ctxIncome = document.getElementById("incomeChart");
+            
+            var incomeLabels = ["Trabajo principal", "Inversiones(Fondo indice)", "Renta de propiedades", "Trabajos freelance", "Trabajo secundario"];
+            var income = [22000, 1000, 12000, 10000, 18000];
+            
+            var incomeChart = new Chart(ctxIncome, {
+                type: "doughnut",
+                data: {
+                    labels: incomeLabels,
+                    datasets: [{
+                            data: income,
+                            backgroundColor: [
+                                "rgba(18, 229, 49, 0.2)",
+                                "rgba(229, 106, 18, 0.2)",
+                                "rgba(225, 18, 229, 0.2)",
+                                "rgba(18, 218, 229, 0.2)",
+                                "rgba(229, 18, 123, 0.2)"
+                            ],
+                            borderColor: [
+                                "rgba(18, 229, 49, 1)",
+                                "rgba(229, 106, 18, 1)",
+                                "rgba(225, 18, 229, 1)",
+                                "rgba(18, 218, 229, 1)",
+                                "rgba(229, 18, 123, 1)"
+                            ],
+                            borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: false
+                }
+            });
+        </script>
+        
+        <script>
+            
+        </script>
+        
         
         <!-- sidebar styling -->
         <style>
@@ -179,6 +234,7 @@ no se que mas poner aaaaaaaaa
                 width:100%;
                 height:45px;
                 background-color:#091933;
+                position:sticky;
             }
             
             #greetingTopBar p{
@@ -231,7 +287,7 @@ no se que mas poner aaaaaaaaa
                 font-size:17px;
             }
             
-            /* class that styles an element, an element i define as for example; a circular chart and a line chart are different elements as they are different things with different functions -they are their own thing- */
+            /* class that styles an element- */
             .dashboardElement{
                 color:#ffd300;
                 border-radius:10px;
@@ -253,6 +309,7 @@ no se que mas poner aaaaaaaaa
             #expensesChartInner span{
                 font-size: 50px;
             }
+            
             
         </style>
         
