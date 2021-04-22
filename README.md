@@ -9,3 +9,5 @@ Si quieres ejecutar la pagina tu mismo necesitaras:
 
 
 o solamente te descargas un visualizador de php y ya esta (no he usado este la verdad, pero se ve bueno: https://sourceforge.net/projects/viewerforphp/)
+
+o simplemente abres el .php con el navegador y ya esta
